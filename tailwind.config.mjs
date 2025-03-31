@@ -1,0 +1,91 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#5419A5',
+        secondary: '#158994',
+        'primary-light': '#7B4DB8',
+        'secondary-light': '#45A0A8',
+      },
+      fontFamily: {
+        sans: [
+          'InterVariable',
+          'Inter',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'Noto Sans',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji',
+        ],
+        heading: [
+          'InterVariable',
+          'Inter',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'Noto Sans',
+          'sans-serif',
+        ],
+      },
+      fontSize: {
+        'sm': ['0.875rem', { lineHeight: '1.5' }],
+        'base': ['1rem', { lineHeight: '1.75' }],
+        'lg': ['1.125rem', { lineHeight: '1.75' }],
+        'xl': ['1.25rem', { lineHeight: '2' }],
+        '2xl': ['1.5rem', { lineHeight: '2' }],
+        '3xl': ['1.875rem', { lineHeight: '2.25' }],
+        '4xl': ['2.25rem', { lineHeight: '2.5' }],
+        '5xl': ['3rem', { lineHeight: '1.25' }],
+        '6xl': ['3.75rem', { lineHeight: '1.2' }],
+        '7xl': ['4.5rem', { lineHeight: '1.15' }],
+      },
+      letterSpacing: {
+        tighter: '-0.02em',
+        tight: '-0.01em',
+        normal: '0',
+        wide: '0.01em',
+        wider: '0.02em',
+        widest: '0.05em',
+      },
+      fontWeight: {
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+      },
+      animation: {
+        'fade-in': 'fade-in 0.5s ease-in-out forwards',
+        'slide-in': 'slide-in 0.5s ease-out forwards',
+      },
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'slide-in': {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+  darkMode: 'class',
+}

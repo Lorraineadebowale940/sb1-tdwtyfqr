@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<section class="relative md:py-32 pt-36 overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <!-- Background dots -->
+    <div class="absolute right-0 top-0 -z-10">
+      <svg width="404" height="404" fill="none" viewBox="0 0 404 404" aria-hidden="true">
+        <defs>
+          <pattern id="dots-header" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="10" cy="10" r="2" class="fill-gray-200 dark:fill-slate-700" />
+          </pattern>
+        </defs>
+        <rect width="404" height="404" fill="url(#dots-header)" />
+      </svg>
+    </div>
+    <!-- Gradient blob -->
+    <div class="absolute -left-48 -top-24">
+      <div class="w-96 h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl opacity-50 dark:opacity-30"></div>
+    </div>
+  </div>
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+        {title}
+      </h1>
+      {subtitle && (
+        <p class="text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>
+      )}
+    </div>
+  </div>
+</section>

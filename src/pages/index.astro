@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Graphics from '../components/Graphics.astro';
+import Metrics from '../components/Metrics.astro';
+import Testimonials from '../components/Testimonials.astro';
+---
+
+<Layout title="Purple Kaizen — Business Transformation Through Innovation">
+  <main>
+    <!-- Hero -->
+    <section class="relative md:h-screen pt-36 ml-auto overflow-hidden">
+      <Graphics />
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="pt-0 md:pt-[76px] pointer-events-none">
+          <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+              Transform Your Business Through 
+              <span class="relative inline-block">
+                <span class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-20 blur-lg transform group-hover:translate-x-1"></span>
+                <span class="relative bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary dark:from-primary-light dark:to-secondary-light animate-pulse">
+                  Innovation
+                </span>
+              </span>
+            </h1>
+            <div class="max-w-3xl mx-auto">
+              <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+                Empowering organizations to reach their full potential through proven methodologies, innovative strategies, and mindset transformation.
+              </p>
+              <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+                <div class="flex w-full sm:w-auto">
+                  <a href="/contact"
+                    class="btn btn-primary sm:mb-0 w-full"
+                    >
+                    Start Your Transformation
+                  </a>
+                </div>
+                <div class="flex w-full sm:w-auto">
+                  <a href="#services"
+                    class="btn w-full bg-gray-50 dark:bg-transparent">
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Hero metrics -->
+          <div class="relative m-auto max-w-5xl mt-8">
+            <div class="relative w-full aspect-[16/9]">
+              <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-xl"></div>
+              <div class="absolute inset-4 bg-white dark:bg-slate-900 rounded-lg shadow-xl">
+                <Metrics />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="relative" id="services">
+      <div class="absolute inset-0 bg-primary dark:bg-slate-800 pointer-events-none mb-32" aria-hidden="true"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 -mb-12">
+        <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+          <div class="mb-8 text-center">
+            <p class="text-base text-secondary font-semibold tracking-wide uppercase">Services</p>
+            <h2 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-white">
+              What We Offer
+            </h2>
+            <p class="max-w-3xl mx-auto text-center text-xl text-gray-200">
+              Comprehensive solutions to transform your business and unlock your team's potential
+            </p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start my-12 dark:text-white">
+            {[
+              {
+                title: 'NLP Coaching for Business Leaders',
+                description: 'Enhance your powers of persuasion and influence to become a more effective leader.',
+                icon: 'M13 10V3L4 14h7v7l9-11h-7z'
+              },
+              {
+                title: 'Sales Success',
+                description: 'Explode your business growth by mastering client acquisition and retention strategies.',
+                icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+              },
+              {
+                title: 'Public Speaking Excellence',
+                description: 'Take your business to new heights while educating and inspiring your audience.',
+                icon: 'M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122'
+              }
+            ].map(({ title, description, icon }) => (
+              <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-xl hover:shadow-lg transition dark:border dark:border-slate-800">
+                <div class="flex items-center mb-4">
+                  <svg class="w-12 h-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon}></path>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <div>
+                    <h3 class="mb-3 text-xl font-bold">{title}</h3>
+                    <p class="text-gray-600 dark:text-slate-400">{description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <Testimonials />
+
+    <!-- Values -->
+    <section class="relative py-16 md:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading">Our Values</h2>
+          <p class="text-xl text-gray-600">Guided by excellence, driven by innovation.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="relative flex flex-col p-8 bg-white dark:bg-slate-900 rounded-xl shadow-xl hover:shadow-2xl transition dark:border dark:border-slate-800 group">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl transition group-hover:scale-[0.98]"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-lg p-3 mb-6 transform -rotate-6 group-hover:rotate-0 transition">
+                <svg class="w-full h-full text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-4">Excellence through Innovation</h3>
+              <p class="text-gray-600">Pioneering new approaches to achieve extraordinary results.</p>
+            </div>
+          </div>
+          <div class="relative flex flex-col p-8 bg-white dark:bg-slate-900 rounded-xl shadow-xl hover:shadow-2xl transition dark:border dark:border-slate-800 group">
+            <div class="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5 rounded-xl transition group-hover:scale-[0.98]"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-lg p-3 mb-6 transform -rotate-6 group-hover:rotate-0 transition">
+                <svg class="w-full h-full text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-4">Impact and Accountability</h3>
+              <p class="text-gray-600">Delivering measurable results with full transparency.</p>
+            </div>
+          </div>
+          <div class="relative flex flex-col p-8 bg-white dark:bg-slate-900 rounded-xl shadow-xl hover:shadow-2xl transition dark:border dark:border-slate-800 group">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 rounded-xl transition group-hover:scale-[0.98]"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-lg p-3 mb-6 transform -rotate-6 group-hover:rotate-0 transition">
+                <svg class="w-full h-full text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-primary mb-4">Passion and Commitment</h3>
+              <p class="text-gray-600">Dedicated to your success through continuous improvement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-gray-700 leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800;
+  }
+
+  .btn-primary {
+    @apply font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+  }
+</style>

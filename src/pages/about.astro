@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<Layout title="About - Purple Kaizen">
+  <main>
+    <PageHeader 
+      title="About Purple Kaizen"
+      subtitle="Transforming businesses through continuous improvement and innovation"
+    />
+    
+    <div class="relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-12">
+          <div class="animate-fade-in">
+            <p class="text-lg text-gray-600 dark:text-slate-400 mb-6">
+              At Purple Kaizen, we believe in the power of continuous improvement - the essence of Kaizen methodology. We help businesses achieve extraordinary results through a combination of proven methodologies and innovative approaches.
+            </p>
+            <p class="text-lg text-gray-600 dark:text-slate-400 mb-6">
+              Our philosophy is rooted in the understanding that success is 80% mindset and 20% strategy. We focus on transforming both the psychological and practical aspects of business to create lasting change and sustainable growth.
+            </p>
+            <div class="grid grid-cols-2 gap-6 mt-8">
+              <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition dark:border dark:border-slate-800">
+                <h3 class="text-3xl font-bold text-primary dark:text-primary-light mb-2">500+</h3>
+                <p class="text-gray-600 dark:text-slate-400">Businesses Transformed</p>
+              </div>
+              <div class="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg hover:shadow-xl transition dark:border dark:border-slate-800">
+                <h3 class="text-3xl font-bold text-primary dark:text-primary-light mb-2">15+</h3>
+                <p class="text-gray-600 dark:text-slate-400">Years Experience</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl transform rotate-3"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978" 
+              alt="Business Team" 
+              class="relative rounded-xl w-full h-full object-cover transform -rotate-3 transition hover:rotate-0"
+            />
+          </div>
+        </div>
+
+        <!-- Meet the Team Section -->
+        <div class="py-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 dark:text-white">Meet Our Team</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-5xl mx-auto">
+            <div class="relative group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                  src="https://res.cloudinary.com/dydlkejl0/image/upload/v1737651254/Lorraine_outside_in_Greenwich_jscinc.jpg" 
+                  alt="Lorraine - Founder & Lead Consultant"
+                  class="w-full aspect-[3/4] object-cover transform group-hover:scale-110 transition duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-90 transition-all duration-300 flex items-center justify-center">
+                  <div class="text-white p-8 opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-300">
+                    <h3 class="text-2xl font-bold mb-2">Lorraine</h3>
+                    <p class="text-lg mb-4">Founder & Lead Consultant</p>
+                    <p class="text-sm">
+                      With over 15 years of experience in business transformation, Lorraine leads our team with passion and expertise in NLP, leadership development, and organizational change.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative group">
+              <div class="relative overflow-hidden rounded-2xl shadow-lg">
+                <img 
+                  src="https://codahosted.io/docs/5mMqujPtFT/blobs/bl-O9U8va20x-/a98114bca1b7bb7496157ccde786d173ce44b0d2dd51f41ccaec9b5543d15f4ee92a4f34257adac4e3f89217e715272378d8cce7ad94117f0a0ef39417fddba2406409090fb26b46d810e5b7f49c68a703b5f6aae647ee2a44775cd17595e2922ed107fb" 
+                  alt="Diksha - Senior Business Strategist"
+                  class="w-full aspect-[3/4] object-cover object-[center_top] transform group-hover:scale-110 transition duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-90 transition-all duration-300 flex items-center justify-center">
+                  <div class="text-white p-8 opacity-0 group-hover:opacity-100 transform group-hover:translate-y-0 translate-y-4 transition-all duration-300">
+                    <h3 class="text-2xl font-bold mb-2">Diksha</h3>
+                    <p class="text-lg mb-4">Senior Business Strategist</p>
+                    <p class="text-sm">
+                      Diksha brings innovative thinking and strategic expertise to help businesses achieve sustainable growth through proven methodologies and transformative approaches.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 dark:text-white">Our Approach</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Mindset First",
+                description: "We focus on transforming mindsets to unlock potential and overcome limiting beliefs.",
+                icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              },
+              {
+                title: "Continuous Improvement",
+                description: "Implementing the Kaizen methodology for sustainable business growth.",
+                icon: "M13 10V3L4 14h7v7l9-11h-7z"
+              },
+              {
+                title: "Proven Systems",
+                description: "Implementing tested methodologies that deliver consistent results.",
+                icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+              }
+            ].map(item => (
+              <div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition dark:border dark:border-slate-800">
+                <div class="text-primary dark:text-primary-light mb-6">
+                  <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-4 dark:text-white">{item.title}</h3>
+                <p class="text-gray-600 dark:text-slate-400">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="relative my-20">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90 dark:opacity-95 rounded-2xl"></div>
+          <div class="relative px-12 py-16 text-center text-white">
+            <h2 class="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
+            <p class="text-lg mb-8 text-gray-100">
+              Let's work together to unlock your business's full potential through innovative strategies and proven methodologies.
+            </p>
+            <a 
+              href="/contact" 
+              class="inline-block bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition transform hover:scale-105"
+            >
+              Start Your Journey
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
